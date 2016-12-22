@@ -19,7 +19,13 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Button number_button = (Button)sender;
+            Set_Number(number_button.Text);
+        }
 
+        public void Set_Number(string num)
+        {
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
