@@ -42,7 +42,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.Equalbutton = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
@@ -189,15 +189,15 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.Optbutton_Click);
             // 
-            // button16
+            // Equalbutton
             // 
-            this.button16.Location = new System.Drawing.Point(230, 168);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(42, 88);
-            this.button16.TabIndex = 16;
-            this.button16.Text = "=";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.Equalbutton_Click);
+            this.Equalbutton.Location = new System.Drawing.Point(230, 168);
+            this.Equalbutton.Name = "Equalbutton";
+            this.Equalbutton.Size = new System.Drawing.Size(42, 88);
+            this.Equalbutton.TabIndex = 16;
+            this.Equalbutton.Text = "=";
+            this.Equalbutton.UseVisualStyleBackColor = true;
+            this.Equalbutton.Click += new System.EventHandler(this.Equalbutton_Click);
             // 
             // button17
             // 
@@ -245,7 +245,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.text_result);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.Equalbutton);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button19);
@@ -285,7 +285,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button Equalbutton;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;

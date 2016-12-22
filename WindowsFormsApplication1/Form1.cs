@@ -49,7 +49,34 @@ namespace WindowsFormsApplication1
         // = 버튼 클릭 시 이벤트 생성
         private void Equalbutton_Click(object sender, EventArgs e)
         {
+            if (this.Temp_result == Double.MinValue)
+                return;
 
+            if (this.Operation_input == string.Empty)
+                return;
+
+            if (this.text_result.Text == string.Empty)
+                return;
+
+            switch (this.Operation_input)
+            {
+                case "+":
+                    this.text_result.Text = (this.Temp_result + Double.Parse(this.text_result.Text)).ToString();
+                    break;
+                case "-":
+                    this.text_result.Text = (this.Temp_result - Double.Parse(this.text_result.Text)).ToString();
+                    break;
+                case "*":
+                    this.text_result.Text = (this.Temp_result * Double.Parse(this.text_result.Text)).ToString();
+                    break;
+                case "/":
+                    if (this.text_result.Text == "0")
+                        return;
+
+                    this.text_result.Text = (this.Temp_result / Double.Parse(this.text_result.Text)).ToString();
+                    break;
+            }
+            Temp_result = Double.Parse(this.text_result.Text);
         }
 
         // 1/x Operation 클릭 시 이벤트 생성
