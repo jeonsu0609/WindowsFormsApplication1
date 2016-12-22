@@ -17,20 +17,36 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private decimal Temp_result;
+        private string Operation_input;
+
+        // 숫자 버튼 + '.' 버튼 입력 생성.
         private void button1_Click(object sender, EventArgs e)
         {
             Button number_button = (Button)sender;
-            Set_Number(number_button.Text);
-        }
-
-        public void Set_Number(string num)
-        {
-            
+            if(number_button.Text == ".")
+            {
+                if (!this.text_result.Text.Contains("."))
+                    this.text_result.Text += number_button.Text;
+            }
+            else
+                this.text_result.Text += number_button.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Button _Button;
 
+            if (this.text_result.Text == string.Empty)
+                return;
+
+            _Button = (Button)sender;
+
+            this.Operation_input = _Button.Text;
+
+            this.Temp_result = decimal.Parse(this.text_result.Text);
+
+            this.text_result.Text = string.Empty;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,11 +85,6 @@ namespace WindowsFormsApplication1
         }
 
         private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
         {
 
         }
@@ -119,6 +130,11 @@ namespace WindowsFormsApplication1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Numbutton_Click(object sender, EventArgs e)
         {
 
         }

@@ -46,7 +46,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.text_result = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -77,7 +77,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "9";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // button4
             // 
@@ -127,7 +127,7 @@
             this.button8.TabIndex = 10;
             this.button8.Text = ".";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.button1_Click);
             // 
             // button9
             // 
@@ -229,20 +229,21 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // textBox1
+            // text_result
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 25);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.text_result.Location = new System.Drawing.Point(12, 12);
+            this.text_result.Name = "text_result";
+            this.text_result.Size = new System.Drawing.Size(260, 25);
+            this.text_result.TabIndex = 18;
+            this.text_result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_result.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.text_result);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button17);
@@ -288,7 +289,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox text_result;
     }
 }
 
