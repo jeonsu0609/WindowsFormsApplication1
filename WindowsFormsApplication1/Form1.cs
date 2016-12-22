@@ -17,11 +17,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private decimal Temp_result;
+        private Double Temp_result=0;
         private string Operation_input;
 
         // 숫자 버튼 + '.' 버튼 입력 생성.
-        private void button1_Click(object sender, EventArgs e)
+        private void Numbutton_Click(object sender, EventArgs e)
         {
             Button number_button = (Button)sender;
             if(number_button.Text == ".")
@@ -33,108 +33,32 @@ namespace WindowsFormsApplication1
                 this.text_result.Text += number_button.Text;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // Operation 버튼 입력 생성
+        private void Optbutton_Click(object sender, EventArgs e)
         {
-            Button _Button;
+            Button operation_button = (Button)sender;
 
             if (this.text_result.Text == string.Empty)
                 return;
 
-            _Button = (Button)sender;
-
-            this.Operation_input = _Button.Text;
-
-            this.Temp_result = decimal.Parse(this.text_result.Text);
-
+            this.Operation_input = operation_button.Text;
+            this.Temp_result = Double.Parse(this.text_result.Text);
             this.text_result.Text = string.Empty;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        // = 버튼 클릭 시 이벤트 생성
+        private void Equalbutton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        // 1/x Operation 클릭 시 이벤트 생성
+        private void Reversebutton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
+            this.text_result.Text = (1 / Double.Parse(this.text_result.Text)).ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Numbutton_Click(object sender, EventArgs e)
         {
 
         }
