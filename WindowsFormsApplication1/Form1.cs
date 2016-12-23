@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
 
         private Double Temp_result=0;
         private string Operation_input;
+        bool is_Operation = false;
 
         // 숫자 버튼 + '.' 버튼 입력 생성.
         private void Numbutton_Click(object sender, EventArgs e)
@@ -41,9 +42,20 @@ namespace WindowsFormsApplication1
             if (this.text_result.Text == string.Empty)
                 return;
 
-            this.Operation_input = operation_button.Text;
-            this.Temp_result = Double.Parse(this.text_result.Text);
-            this.text_result.Text = string.Empty;
+            if(is_Operation == false)
+            {
+                this.Operation_input = operation_button.Text;
+                this.Temp_result = Double.Parse(this.text_result.Text);
+                this.text_result.Text = string.Empty;
+                this.is_Operation = true;
+            }
+            else
+            {
+                Equalbutton.PerformClick();
+                this.Operation_input = operation_button.Text;
+                this.text_result.Text = string.Empty;
+                this.is_Operation = true;
+            }
         }
 
         // = 버튼 클릭 시 이벤트 생성
@@ -77,6 +89,7 @@ namespace WindowsFormsApplication1
                     break;
             }
             Temp_result = Double.Parse(this.text_result.Text);
+            is_Operation = false;
         }
 
         // 1/x Operation 클릭 시 이벤트 생성
