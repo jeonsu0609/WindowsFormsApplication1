@@ -70,6 +70,8 @@ namespace WindowsFormsApplication1
             if (this.text_result.Text == string.Empty)
                 return;
 
+            list.Items.Add(Temp_result + Operation_input + text_result.Text);
+
             switch (this.Operation_input)
             {
                 case "+":
@@ -96,6 +98,11 @@ namespace WindowsFormsApplication1
         private void Reversebutton_Click(object sender, EventArgs e)
         {
             this.text_result.Text = (1 / Double.Parse(this.text_result.Text)).ToString();
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            this.text_result.Text = string.Empty;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
